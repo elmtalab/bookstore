@@ -269,7 +269,7 @@ Also, the BookDetailView uses this <int:pk> or id to show the details of a parti
 
 ### templates
 
-Its time for templates now, if you remember we used template_name in our class based views. The content on the webpage basically comes from templates (actually html files) and the views holds the overall functionality in short. First lets create a template folder, your templates folder should be outside your ecom_project folder, forex: take a look at my <a href = "https://github.com/YashMarmat/django-ecommece-bookstore">repository</a>. Mean place the folder just below the ecom_project folder (note: there are many ways to use templates in django but for now im using this approach).
+Its time for templates now, if you remember we used template_name in our class based views. The content on the webpage basically comes from templates (actually html files) and the views holds the overall functionality in short. First lets create a template folder, your templates folder should be outside your ecom_project folder, forex: take a look at my <a href = "https://github.com/elmtalab/bookstore">repository</a>. Mean place the folder just below the ecom_project folder (note: there are many ways to use templates in django but for now im using this approach).
 
 - or just follow below command
 
@@ -295,7 +295,7 @@ now open your settings.py file from ecom_project folder and update the Template 
 
 Inside templates folder create 5 .html files namely --> base.html, checkout.html, detail.html, list.html, search_results.html (again order doesn't matter). Update the files by putting the codes mention in below links
 
-<a href ="https://github.com/YashMarmat/django-ecommece-bookstore/blob/master/templates/base.html">base.html</a>, <a href ="https://github.com/YashMarmat/django-ecommece-bookstore/blob/master/templates/checkout.html">checkout.html</a>, <a href ="https://github.com/YashMarmat/django-ecommece-bookstore/blob/master/templates/detail.html">detail.html</a>, <a href ="https://github.com/YashMarmat/django-ecommece-bookstore/blob/master/templates/list.html">list.html</a>, <a href ="https://github.com/YashMarmat/django-ecommece-bookstore/blob/master/templates/search_results.html">search_results.html</a>
+<a href ="https://github.com/elmtalab/bookstore/blob/master/templates/base.html">base.html</a>, <a href ="https://github.com/elmtalab/bookstore/blob/master/templates/checkout.html">checkout.html</a>, <a href ="https://github.com/elmtalab/bookstore/blob/master/templates/detail.html">detail.html</a>, <a href ="https://github.com/elmtalab/bookstore/blob/master/templates/list.html">list.html</a>, <a href ="https://github.com/elmtalab/bookstore/blob/master/templates/search_results.html">search_results.html</a>
 
 Note: detail knowledge of templates is not given here as i said earlier im assuming that you have the basic knowlege of MVT in django.
 
@@ -335,7 +335,7 @@ provided by django. But we do require a template file for it. Now login template
 - inside tempaltes folder create another folder called 'registration'
 - now inside this registration folder create template file and name it --> login.html
 
-Now update the login.html file from <a href="https://github.com/YashMarmat/django-ecommece-bookstore/blob/master/templates/registration/login.html">here</a>
+Now update the login.html file from <a href="https://github.com/elmtalab/bookstore/blob/master/templates/registration/login.html">here</a>
 
 ok, a little more work on logins, by default django doesnt know where to send the user after they log in and after they log out. So we need to use the url reference name (created in urls.py file of books app). So, i want that after the user logs in and logs out that user should be sent to the home page or the very first page of our website and the url working working on that page was 'list'. Remember those empty quotation marks? see below:
 
@@ -405,7 +405,7 @@ go to templates folder and create a signup.html file (Note: do not put signup.ht
 
 (django_project)$`touch templates/signup.html`
 
-put the code in signup.html, present <a href = "https://github.com/YashMarmat/django-ecommece-bookstore/blob/master/templates/signup.html">here</a>.
+put the code in signup.html, present <a href = "https://github.com/elmtalab/bookstore/blob/master/templates/signup.html">here</a>.
 
 ok, we done with the views now its time for url routing, go ahead and create a new urls.py for this accounts app.
 
@@ -452,23 +452,3 @@ Ok, to use some static css in django we need to update few thing in our settings
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
     ]
-
-- now create a static folder and place it outside the ecom_project folder. Then inside this static folder create another folder called 'css' then inside this css folder create a file called base.css (follow below code).
-
-(django_project)$`mkdir static`
-
-(django_project)$`mkdir static/css`
-
-(django_project)$`touch static/css/base.css`
-
-open 'base.css' folder and put this <a href="https://github.com/YashMarmat/django-ecommece-bookstore/blob/master/static/css/base.css">code</a> in it.
-
-Now, save everything and test your bookstore website :)
-
-(django_project)$ python manage.py runserver
-
-All Done! :)
-
-if you ran into some issues at some point please let me know. Go to issues section of this repository put your problems there. I'll answer them as soon as possible or email me for any feedback --> yashmarmat08@gmail.com
-
-<p><a href="#top">Back to Top</a></p>
